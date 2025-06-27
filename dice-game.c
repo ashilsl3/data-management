@@ -2,12 +2,16 @@
 #include <stdlib.h>
 #include <time.h>
 
+int main(){
+    char name[100];
 
-int main(void) {
-   
+    printf("What is yout name?\n");
+    scanf("%99s", name);
+
+    printf("Hello, %s!\n", name);
+
     srand(time(NULL));
     printf("Rolling dice...\n");
-
     int die1 = (rand() % 6) + 1;
     int die2 = (rand() % 6) + 1;
     int total = die1 + die2;
@@ -18,10 +22,11 @@ int main(void) {
     printf("Total value: %d\n", total);
 
     if(total > 7){
-        printf("%s win1\n", name);
+        printf("%s win!\n", name);
     }else {
-        printf("ou lost\n");
+        printf("You lost\n");
     }
 
     return 0; 
 }
+    
